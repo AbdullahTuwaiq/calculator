@@ -35,6 +35,11 @@ def divide(a, b):
     return a / b
 
 
+def power(a, b):
+    """دالة لحساب الأس (a مرفوع للقوة b)."""
+    return a ** b
+
+
 def show_menu():
     """عرض قائمة العمليات الحسابية."""
     print("\n--- الآلة الحاسبة ---")
@@ -42,21 +47,20 @@ def show_menu():
     print("2. طرح (-)")
     print("3. ضرب (*)")
     print("4. قسمة (/)")
-    print("5. خروج")
-
-
+    print("5. أس (^)")
+    print("6. خروج")
 def main():
     """الدالة الرئيسية لتشغيل الآلة الحاسبة."""
     while True:
         show_menu()
-        choice = input("اختر رقم العملية (1-5): ").strip()
+        choice = input("اختر رقم العملية (1-6): ").strip()
 
-        if choice == "5":
+        if choice == "6":
             print("تم إغلاق الآلة الحاسبة. مع السلامة!")
             break
 
-        if choice not in ["1", "2", "3", "4"]:
-            print("خيار غير صحيح! الرجاء اختيار رقم من 1 إلى 5.")
+        if choice not in ["1", "2", "3", "4", "5"]:
+            print("خيار غير صحيح! الرجاء اختيار رقم من 1 إلى 6.")
             continue
 
         try:
@@ -75,6 +79,8 @@ def main():
         elif choice == "4":
             result = divide(num1, num2)
             print(f"النتيجة: {result}")
+        elif choice == "5":
+            print(f"النتيجة: {num1} ^ {num2} = {power(num1, num2)}")
 
 
 if __name__ == "__main__":
