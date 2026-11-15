@@ -47,10 +47,10 @@ def show_menu():
     print("2. طرح (-)")
     print("3. ضرب (*)")
     print("4. قسمة (/)")
-    print("5. خروج")
-
-
+    print("5. أس (^)")
+    print("6. خروج")
 def main():
+    
     """الدالة الرئيسية لتشغيل الآلة الحاسبة."""
     while True:
         show_menu()
