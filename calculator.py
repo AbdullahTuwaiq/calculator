@@ -35,6 +35,11 @@ def divide(a, b):
     return a / b
 
 
+def power(a, b):
+    """دالة لحساب الأس (a مرفوع للقوة b)."""
+    return a ** b
+
+
 def show_menu():
     """عرض قائمة العمليات الحسابية."""
     print("\n--- الآلة الحاسبة ---")
